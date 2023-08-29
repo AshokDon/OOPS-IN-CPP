@@ -6,7 +6,7 @@ void TakeInput(){
     freopen("output.txt", "w", stdout);
     #endif
 }
-/*static veriables and static functions*/
+/*static variables and static functions*/
 //
 void Get(){
 	static int cnt = 0;
@@ -14,7 +14,7 @@ void Get(){
 }
 class Human{
 public:
-	static int Human_count;
+	static int Human_count;//one reference copy is created for all objects
 	Human(){
 		Human_count++;
 	}
@@ -23,7 +23,7 @@ public:
 	}
 
 };
-int Human::Human_count = 0;
+int Human::Human_count = 0;//we can initialize  out side the class
 int main()
 {
 	TakeInput();
