@@ -36,7 +36,9 @@ class Member{
         InfoBook.push_back(bookId);
     }
     void returnBook(int bookId){
-        //InfoBook.erase(InfoBook.begin(),InfoBook.end(),bookId);
+        auto it = find(InfoBook.begin(),InfoBook.end(),bookId);
+        InfoBook.erase(it);
+
 
     }
 
@@ -94,5 +96,6 @@ int main(){
     Library lib;
     Book b1(1,"c++","Ashok",3);
     lib.addBook(b1);
-    Member m1(2,)
+    Member m1(2,"Ram",78347463);
+
 }
